@@ -25,3 +25,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo IM ON THE MAIN BRANCH
+      
+    - name: Jello World
+      run: sh ./github/scripts/git.sh
+      env:
+        HELLO_WORLD: ${{ secrets.HELLO_WORLD }}
