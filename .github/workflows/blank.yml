@@ -5,10 +5,8 @@ name: CI-MAIN
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: [ test ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,9 +22,5 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: echo IM ON THE MAIN BRANCH
-      
-    - name: Jello World
-      run: sh ./github/scripts/git.sh
-      env:
-        HELLO_WORLD: ${{ secrets.HELLO_WORLD }}
+      run: echo IM ON THE B3 BRANCH
+
